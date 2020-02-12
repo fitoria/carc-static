@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Santa Fe</title>
+	<atom:link href="http://carc.libre.org.ar/index.php/category/santa-fe/feed/" rel="self" type="application/rss+xml" />
+	<link>http://carc.libre.org.ar</link>
+	<description></description>
+	<lastBuildDate>Fri, 10 Jan 2020 05:13:26 +0000</lastBuildDate>
+	<language>es-AR</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.3.2</generator>
+	<item>
+		<title>Redes Revueltas</title>
+		<link>http://carc.libre.org.ar/index.php/2019/12/05/redes-revueltas/</link>
+				<pubDate>Thu, 05 Dec 2019 04:37:00 +0000</pubDate>
+		<dc:creator><![CDATA[flor]]></dc:creator>
+				<category><![CDATA[Santa Fe]]></category>
+
+		<guid isPermaLink="false">http://carc.libre.org.ar/?p=301</guid>
+				<description><![CDATA[El colectivo multisectorial está compuesto por integrantes de distintos colectivos: Proyecto Revuelta, Observatorio de Cultura de Libre, Radar Libre, Tecnicatura Universitaria de software Libre – UNL. ▸ Vínculo/Situación con redes Comunitarias de Internet Desde hace un par de años se ha constituido en un grupo de experimentación y formación. A<a class="moretag" href="http://carc.libre.org.ar/index.php/2019/12/05/redes-revueltas/"> Leer más&#8230;</a>]]></description>
+								<content:encoded><![CDATA[
+<p> El colectivo multisectorial está compuesto por integrantes de distintos colectivos: Proyecto Revuelta, Observatorio de Cultura de Libre, Radar Libre, Tecnicatura Universitaria de software Libre – UNL.  </p>
+
+
+
+<p>
+▸
+<strong>Vínculo/Situación
+con redes Comunitarias de Internet </strong>
+</p>
+
+
+
+<p>Desde
+hace un par de años se ha constituido en un grupo de experimentación
+y formación. A partir de las tomas de las facultades de la UNL en
+2018 y el contacto con  Proyecto Revuelta, se comienza a pensar y
+accionar la posibilidad de una Red Comunitaria en el territorio,
+donde la organización lleva adelante el Bachillerato Popular “La
+Vuelta del Paraguayo”. Este accionar está articulado con la ronda
+de mujeres del barrio, quienes necesitaban herramientas para abordar
+situaciones de violencia de género y comunicación en general.  Allí
+se han desarrollado actividades de reflexión, visibilización y
+formación en torno a las redes comunitarias. Asimismo se ha
+experimentado sobre el armado y conexión de dos nodos y la conexión
+a herramientas de software de la mesh. 
+</p>
+
+
+
+<p>▸
+<strong>Contacto</strong></p>
+
+
+
+<p>
+Grupo
+de Telegram</p>
+]]></content:encoded>
+										</item>
+	</channel>
+</rss>
