@@ -8,7 +8,7 @@
 <channel>
 	<title>
 	Comentarios para 	</title>
-	<atom:link href="http://carc.libre.org.ar/index.php/comments/feed/" rel="self" type="application/rss+xml" />
+	<atom:link href="http://carc.libre.org.ar/blog/comments/feed/" rel="self" type="application/rss+xml" />
 	<link>http://carc.libre.org.ar</link>
 	<description></description>
 	<lastBuildDate>Fri, 10 Jan 2020 05:30:50 +0000</lastBuildDate>
