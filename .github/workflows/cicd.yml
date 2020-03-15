@@ -1,0 +1,22 @@
+name: Continuos integration
+
+on: [push]
+
+jobs:
+  deploy:
+    name: recreate docker image
+    runs-on: ubuntu-latest
+    steps:
+      - name: webfactory/ssh-agent
+        uses: webfactory/ssh-agent@v0.1.1
+        with:
+          ssh-private-key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      - name: pull repo
+        run: /home/debian/Docker/carc-static && git pull
+      - name: recreate image
+        run: |
+          cd /home/debian/Docker
+          ./deploy-carc.sh
+        env:
+          SSH_DEPLOY_SERVER: ${{ secrets.SSH_DEPLOY_SERVER }}
+          SSH_DEPLOY_USER: ${{ secrets.SSH_DEPLOY_USER }}
