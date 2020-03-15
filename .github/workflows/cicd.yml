@@ -11,6 +11,8 @@ jobs:
         uses: webfactory/ssh-agent@v0.1.1
         with:
           ssh-private-key: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      - name: install ssh
+        run: sudo apt-get install ssh -y
       - name: recreate image
         run: |
           cd ~/Docker/carc-static && git pull
