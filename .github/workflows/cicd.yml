@@ -11,11 +11,10 @@ jobs:
         uses: webfactory/ssh-agent@v0.1.1
         with:
           ssh-private-key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      - name: pull repo
-        run: cd /home/debian/Docker/carc-static && git pull
       - name: recreate image
         run: |
-          cd /home/debian/Docker
+          cd /home/debian/Docker/carc-static && git pull
+          cd ~/Docker
           ./deploy-carc.sh
         env:
           SSH_DEPLOY_SERVER: ${{ secrets.SSH_DEPLOY_SERVER }}
