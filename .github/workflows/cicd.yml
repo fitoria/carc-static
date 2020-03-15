@@ -14,10 +14,10 @@ jobs:
       - name: install ssh
         run: sudo apt-get install ssh -y
       - name: recreate image
-        run: |
-          cd ~/Docker/carc-static && git pull
-          cd ~/Docker
-          ./deploy-carc.sh
         env:
           SSH_DEPLOY_SERVER: ${{ secrets.SSH_DEPLOY_SERVER }}
           SSH_DEPLOY_USER: ${{ secrets.SSH_DEPLOY_USER }}
+        run: |
+          ssh SSH_DEPLOY_USER@SSH_DEPLOY_SERVER "cd ~/Docker/carc-static && git pull && exit"
+          ssh SSH_DEPLOY_USER@SSH_DEPLOY_SERVER "cd ~/Docker && ./deploy-carc.sh && exit"
+       
