@@ -13,7 +13,7 @@ jobs:
           ssh-private-key: ${{ secrets.AWS_ACCESS_KEY_ID }}
       - name: recreate image
         run: |
-          cd /home/debian/Docker/carc-static && git pull
+          cd ~/Docker/carc-static && git pull
           cd ~/Docker
           ./deploy-carc.sh
         env:
