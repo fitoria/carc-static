@@ -13,7 +13,7 @@ jobs:
           ssh-private-key: ${{ secrets.AWS_ACCESS_KEY_ID }}
       - name: recreate image
         run: |
-          apt update -y
+          git pull
         env:
           SSH_DEPLOY_SERVER: ${{ secrets.SSH_DEPLOY_SERVER }}
           SSH_DEPLOY_USER: ${{ secrets.SSH_DEPLOY_USER }}
