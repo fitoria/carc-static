@@ -11,7 +11,7 @@ jobs:
         - uses: webfactory/ssh-agent@v0.2.0
           with:
               ssh-private-key: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        - run: cp index.html ~/Docker
+        - run: cp /tmp/index.html ~/Docker
           env:
             SSH_DEPLOY_SERVER: ${{ secrets.SSH_DEPLOY_SERVER }}
             SSH_DEPLOY_USER: ${{ secrets.SSH_DEPLOY_USER }}
