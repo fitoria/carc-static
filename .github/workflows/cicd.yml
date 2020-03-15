@@ -19,6 +19,6 @@ jobs:
           SSH_DEPLOY_USER: ${{ secrets.SSH_DEPLOY_USER }}
           SERVER: ${{ secrets.SERVER }}
         run: |
-          ssh SERVER "cd ~/Docker/carc-static && git pull && exit"
-          ssh SERVER "cd ~/Docker && ./deploy-carc.sh && exit"
+          ssh SERVER 
+          ssh SERVER 
        
