@@ -5,10 +5,19 @@ on: [push]
 jobs:
   deploy:
     name: recreate docker image
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
-      - name: deploy
-        run: cd ~/Docker/carc-static && git pull
+      - uses: actions/checkout@v2
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2.0.0      
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}      
+          SLACK_COLOR: '#3278BD'
+          SLACK_MESSAGE: 'Post Content :rocket:'
+          SLACK_TITLE: Post Title
+
+          # - name: deploy
+          #   run: cd ~/Docker/carc-static && git pull
  
  
  
