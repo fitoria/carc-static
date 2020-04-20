@@ -28,10 +28,6 @@ jobs:
           name: webpack artifacts
           path: public/
 
-  slackNotification:
-    name: Slack Notification
-    runs-on: ubuntu-latest
-    steps:
       - name: Slack Notification 3
         uses: homoluctus/slatify@master
         if: always()
