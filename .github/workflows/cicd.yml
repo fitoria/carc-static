@@ -39,6 +39,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Required
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }} # Required
 
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
 
       - name: Slack Notification 3
         uses: homoluctus/slatify@master
