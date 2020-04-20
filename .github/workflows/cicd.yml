@@ -32,8 +32,9 @@ jobs:
       - name: Notify the start
         uses: innocarpe/actions-slack@v1
         with:
-          status: ${{ job.status }} # Required
-          success_text: '<!subteam^S1ABC2DEF> @${{ github.actor }} just started the workflow for `${{ github.ref }}`'
+          status: ${{ job.status }}
+          #success_text: '<!subteam^S1ABC2DEF> @${{ github.actor }} just started the workflow for `${{ github.ref }}`'
+          success_text: '@${{ github.actor }} just started the pipeline for `${{ github.ref }}`, to see the progress click on Workflow'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Required
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }} # Required
@@ -44,11 +45,11 @@ jobs:
         if: always()
         with:
           type: ${{ job.status }}
-          job_name: '*Status deploy*'
+          job_name: '*Status deploy:*'
           mention: 'here'
           mention_if: 'failure'
           url: ${{ secrets.SLACK_WEBHOOK }}
           channel: '#alertas'
-          commit: true
+          Commit: true
           username: Github_actions
           token: ${{ secrets.GITHUB_TOKEN }}      
