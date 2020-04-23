@@ -35,7 +35,7 @@ jobs:
         with:
           type: ${{ job.status }}
           job_name: '*Status deploy:*'
-          mention: 'here'
+   #       mention: 'here'
    #       mention_if: 'failure'
           url: ${{ secrets.SLACK_WEBHOOK }}
           channel: '#alertas'
