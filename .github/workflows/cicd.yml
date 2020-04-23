@@ -36,9 +36,9 @@ jobs:
           type: ${{ job.status }}
           job_name: '*Status deploy:*'
           mention: 'here'
-          mention_if: 'failure'
+   #       mention_if: 'failure'
           url: ${{ secrets.SLACK_WEBHOOK }}
           channel: '#alertas'
           Commit: true
-          username: Github_actions
+          username: Github
           token: ${{ secrets.GITHUB_TOKEN }}      
