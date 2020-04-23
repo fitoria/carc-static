@@ -12,7 +12,7 @@ jobs:
         with:
           status: ${{ job.status }}
           #success_text: '<!subteam^S1ABC2DEF> @${{ github.actor }} just started the workflow for `${{ github.ref }}`'
-          success_text: '@${{ github.actor }} just started the pipeline for `${{ github.ref }}`, to see the progress click on Workflow'
+          success_text: '@${{ github.actor }} just started the pipeline for `${{ github.ref }}`, to see the progress click on workflow'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }} 
