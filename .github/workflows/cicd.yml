@@ -18,16 +18,16 @@ jobs:
 #          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }} 
 
 
-#      - uses: actions/checkout@v1
-#      - name: npm install and build webpack
-#        run: |
-#          npm install
-#          npm run build
-#          rm -rf src
-#      - uses: actions/upload-artifact@master
-#        with:
-#          name: webpack artifacts
-#          path: public/
+      - uses: actions/checkout@v1
+      - name: npm install and build webpack
+        run: |
+          npm install
+          npm run build
+          rm -rf tetrix
+      - uses: actions/upload-artifact@master
+        with:
+          name: webpack artifacts
+          path: public/
 
       - name: Otra notificación
         uses: ayalaluquez/slack@master
