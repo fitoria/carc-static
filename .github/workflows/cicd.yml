@@ -7,38 +7,45 @@ jobs:
     name: recreate docker image
     runs-on: ubuntu-latest
     steps:
-      - name: Notify the start
-        uses: innocarpe/actions-slack@v1
-        with:
-          status: ${{ job.status }}
-          #success_text: '<!subteam^S1ABC2DEF> @${{ github.actor }} just started the workflow for `${{ github.ref }}`'
-          success_text: '@${{ github.actor }} just started the pipeline for `${{ github.ref }}`, to see the progress click on workflow'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }} 
+#      - name: Notify the start
+#        uses: innocarpe/actions-slack@v1
+#        with:
+#          status: ${{ job.status }}
+#          #success_text: '<!subteam^S1ABC2DEF> @${{ github.actor }} just started the workflow for `${{ github.ref }}`'
+#          success_text: '@${{ github.actor }} just started the pipeline for `${{ github.ref }}`, to see the progress click on workflow'
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
+#          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }} 
 
 
-      - uses: actions/checkout@v1
-      - name: npm install and build webpack
-        run: |
-          npm install
-          npm run build
-          rm -rf src
-      - uses: actions/upload-artifact@master
-        with:
-          name: webpack artifacts
-          path: public/
+#      - uses: actions/checkout@v1
+#      - name: npm install and build webpack
+#        run: |
+#          npm install
+#          npm run build
+#          rm -rf src
+#      - uses: actions/upload-artifact@master
+#        with:
+#          name: webpack artifacts
+#          path: public/
 
-      - name: Slack Notification 3
-        uses: homoluctus/slatify@master
-        if: always()
-        with:
-          type: ${{ job.status }}
-          job_name: '*Status deploy:*'
+      - name: Otra notificación
+        uses: actions/slack-notifier-action@v1
+        with: 
+          webhook_url:: ${{ secrets.SLACK_WEBHOOK }} 
+
+
+
+#      - name: Slack Notification 3
+#        uses: homoluctus/slatify@master
+#        if: always()
+#        with:
+#          type: ${{ job.status }}
+#          job_name: '*Status deploy:*'
    #       mention: 'here'
    #       mention_if: 'failure'
-          url: ${{ secrets.SLACK_WEBHOOK }}
-          channel: '#alertas'
-          Commit: true
-          username: Github
-          token: ${{ secrets.GITHUB_TOKEN }}      
+#          url: ${{ secrets.SLACK_WEBHOOK }}
+#          channel: '#alertas'
+#          Commit: true
+#          username: Github
+#          token: ${{ secrets.GITHUB_TOKEN }}      
