@@ -32,7 +32,7 @@ jobs:
       - name: Otra notificación
         uses: actions/slack-notifier-action@v1
         with: 
-          webhook_url:: ${{ secrets.SLACK_WEBHOOK }} 
+          webhook_url:: '${{ secrets.SLACK_WEBHOOK }}' 
 
 
 
