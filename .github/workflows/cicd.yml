@@ -30,7 +30,7 @@ jobs:
 #          path: public/
 
       - name: Otra notificación
-        uses: ayalaluquez/slack-notice-action@master
+        uses: ayalaluquez/slack@master
         with:
           status: ${{ job.status }}
         env:
